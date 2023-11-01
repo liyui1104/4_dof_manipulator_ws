@@ -18,7 +18,7 @@
 ---
 * **The workflow of controlling my manipulator arm using moveit and ros\_control**
 
-![image](https://gitee.com/lingyu-i/4_dof_manipulator_ws/raw/master/markdown_image/drawio_workflow.png)
+![image](https://github.com/liyui1104/4_dof_manipulator_ws/blob/main/markdown_image/drawio_workflow.png)
 
 
 1. C++ API, Rviz
@@ -48,15 +48,15 @@ It should be noted that there're not sensors which can feedback current position
 ---
 * **The workflow of controlling the robot using ros\_control**
 
-![image](https://gitee.com/lingyu-i/4_dof_manipulator_ws/raw/master/markdown_image/iZPgncoNh8YUNNNISRUBySwmlmyvbUHXCphnH4HIllM.png)
+![image](https://github.com/liyui1104/4_dof_manipulator_ws/blob/main/markdown_image/iZPgncoNh8YUNNNISRUBySwmlmyvbUHXCphnH4HIllM.png)
 
 * **The boot sequence for myarm.launch**
 
-![image](https://gitee.com/lingyu-i/4_dof_manipulator_ws/raw/master/markdown_image/GmoAiECkPao3zzfBOGguP8Gfcmob1ugkLiqqMJexuaU.png)
+![image](https://github.com/liyui1104/4_dof_manipulator_ws/blob/main/markdown_image/GmoAiECkPao3zzfBOGguP8Gfcmob1ugkLiqqMJexuaU.png)
 
 * **The rqt\_graph**
 
-![image](https://gitee.com/lingyu-i/4_dof_manipulator_ws/raw/master/markdown_image/g-XU2uPsXHXpFWgxVfnapsNbn5DexiZOp9D7XKFHxEI.png)
+![image](https://github.com/liyui1104/4_dof_manipulator_ws/blob/main/markdown_image/g-XU2uPsXHXpFWgxVfnapsNbn5DexiZOp9D7XKFHxEI.png)
 
 ---
 * **Note:  JointTrajectoryController is essentially actionserver, which drives the mechanical arm, it will interact with the client of Moveit.**
@@ -98,7 +98,7 @@ The type of the message for communication is std\_msgs/Int32MultiArray.
 # **3 Debug information**
 * The rqt\_graph
 
-![image](https://gitee.com/lingyu-i/4_dof_manipulator_ws/raw/master/markdown_image/Smqgv_NmR7r6qWi0ruWEFsHBCfQkbQrjuk-O0wcHvJo.png)
+![image](https://github.com/liyui1104/4_dof_manipulator_ws/blob/main/markdown_image/Smqgv_NmR7r6qWi0ruWEFsHBCfQkbQrjuk-O0wcHvJo.png)
 
 
 
