@@ -1,0 +1,14 @@
+<launch>
+  
+  <!-- Load the ros_control -->
+  <include file="$(find myarm_moveit_config)/launch/ros_controllers.launch"/>
+
+  <!-- Load the moveit -->
+  <include file="$(find myarm_moveit_config)/launch/demo.launch"/>
+
+  <!-- Load the rosserial_arduino -->
+  <node pkg="rosserial_python" name="rosserial_arduino_node" type="serial_node.py" 
+        args="/dev/ttyUSB0" output="screen">
+  </node>
+
+</launch>

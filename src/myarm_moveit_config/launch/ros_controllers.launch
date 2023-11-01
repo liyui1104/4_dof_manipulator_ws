@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- Load the ros_control node -->
+  <node name="myarm_hardware_interface_node" pkg="myarm_hardware_interface" type="myarm_hardware_interface" output="screen"/>
+  
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	      respawn="false" output="screen">
+  </node>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find myarm_moveit_config)/config/ros_controllers.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+        output="screen" args="joint_state_controller arm_position_controller "/>
+
+</launch>

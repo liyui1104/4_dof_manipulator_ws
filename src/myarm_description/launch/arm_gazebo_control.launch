@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="robot_description" textfile="$(find myarm_description)/urdf/myarm_description.urdf" />
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model myarm_description" />
+  
+  <rosparam command="load" file="$(find myarm_description)/config/arm_control.yaml" />
+  <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="arm_controller" />
+  
+  <rosparam command="load" file="$(find myarm_description)/config/joint_state_controller.yaml" />
+  <node name="joint_state_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller" />
+  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+</launch>
